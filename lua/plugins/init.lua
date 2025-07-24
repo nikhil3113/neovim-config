@@ -9,9 +9,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  	{ "nvim-lualine/lualine.nvim" },
-  	{ "nvim-tree/nvim-tree.lua" },
-  	{ "nvim-lua/plenary.nvim"},
-  	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	require("plugins.telescope"),
+
+  require("plugins.telescope"),
+  require("plugins.treesitter"),
+  require("plugins.colors"),
 })
