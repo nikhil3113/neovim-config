@@ -30,4 +30,11 @@ keymap("n", "Q", "<nop>")
 --select all current same words
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>]], opts)
 
+--auto completions
+keymap("i", "<C-Space>", "<C-x><C-o>", opts)
 
+--lsp 
+keymap("n", "K", vim.lsp.buf.hover, {desc = "LSP Hover"})
+keymap("n", "gd", vim.lsp.buf.definition, {desc="Go to Definition"})
+keymap("n", "gr", vim.lsp.buf.references, {desc="Go to References"})
+keymap("n", "<leader>n", vim.lsp.buf.rename, {desc="Rename"})

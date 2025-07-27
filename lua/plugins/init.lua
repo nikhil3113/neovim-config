@@ -15,4 +15,8 @@ require("lazy").setup({
   require("plugins.colors"),
   require("plugins.undotree"),
   require("plugins.fugitive"),
+  require("plugins.lsp"),
+  require("plugins.completions"),
+  require("plugins.autopairs"),
+  require("plugins.mason"),
 })
