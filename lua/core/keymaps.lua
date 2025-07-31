@@ -38,3 +38,5 @@ keymap("n", "K", vim.lsp.buf.hover, {desc = "LSP Hover"})
 keymap("n", "gd", vim.lsp.buf.definition, {desc="Go to Definition"})
 keymap("n", "gr", vim.lsp.buf.references, {desc="Go to References"})
 keymap("n", "<leader>n", vim.lsp.buf.rename, {desc="Rename"})
+
+keymap("n", "K", vim.lsp.buf.hover, opts)

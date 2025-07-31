@@ -26,7 +26,19 @@ return {
     --CSS:
     lspconfig.cssls.setup({})
 
-    lspconfig.gopls.setup({})
+    lspconfig.gopls.setup({
+      settings = {
+        gopls = {
+          gofumpt = true, -- Format using gofumpt (stricter gofmt)
+          usePlaceholders = true, -- Enable placeholders for function parameters/snippets
+          staticcheck = true, -- Enable additional checks
+          analyses = {
+            unusedparams = true,
+            unreachable = true,
+          },
+        }
+      }
+    })
 
   end,
 }
