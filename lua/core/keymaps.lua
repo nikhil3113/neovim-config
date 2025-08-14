@@ -40,3 +40,6 @@ keymap("n", "gr", vim.lsp.buf.references, {desc="Go to References"})
 keymap("n", "<leader>n", vim.lsp.buf.rename, {desc="Rename"})
 
 keymap("n", "K", vim.lsp.buf.hover, opts)
+
+--nvim-tree
+keymap("n","<leader>e", ":NvimTreeToggle<CR>", opts) 

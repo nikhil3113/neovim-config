@@ -16,7 +16,8 @@ return {
         "javascript", 
         "typescript", 
         "go", 
-        "html"  
+        "html",
+        "python"
       },
 
 			sync_install = false,

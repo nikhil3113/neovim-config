@@ -19,4 +19,5 @@ require("lazy").setup({
   require("plugins.completions"),
   require("plugins.autopairs"),
   require("plugins.mason"),
+  require("plugins.nvim-tree"),
 })
