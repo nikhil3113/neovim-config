@@ -42,4 +42,11 @@ keymap("n", "<leader>n", vim.lsp.buf.rename, {desc="Rename"})
 keymap("n", "K", vim.lsp.buf.hover, opts)
 
 --nvim-tree
-keymap("n","<leader>e", ":NvimTreeToggle<CR>", opts) 
+keymap("n","<leader>e", ":NvimTreeToggle<CR>", opts)
+
+--terminal
+--open a terminal in current window
+keymap('n', '<leader>t', ':terminal<CR>', opts)
+
+-- exit terminal mode without closing the terminal
+keymap('t', '<Esc>', '<C-\\><C-n>', opts)

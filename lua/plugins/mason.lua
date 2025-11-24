@@ -16,6 +16,7 @@ return {
           "cssls",
           "jsonls",
           "gopls",
+          "jdtls",
         },
         automatic_installation = true,
       })

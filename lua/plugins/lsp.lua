@@ -40,6 +40,19 @@ return {
       }
     })
 
+    lspconfig.jdtls.setup({
+      settings = {
+        java = {
+          format = {
+            enabled = true,
+          },
+          saveActions = {
+            organizeImports = true,
+          },
+        },
+      },
+    })
+
   end,
 }
 
