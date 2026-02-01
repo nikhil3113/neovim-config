@@ -50,3 +50,8 @@ keymap('n', '<leader>t', ':terminal<CR>', opts)
 
 -- exit terminal mode without closing the terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', opts)
+
+--switch between tree and file 
+keymap("n", '<C-Left>', '<C-w><Left>', opts)
+keymap("n", '<C-Right>', '<C-w><Right>', opts)
+
