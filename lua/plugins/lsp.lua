@@ -1,58 +1,52 @@
 return {
   "neovim/nvim-lspconfig",
 
-  event = {"BufReadPre", "BufNewFile"},
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
-
-  local lspconfig = require("lspconfig")
-
-    --Setup for lua
-    lspconfig.lua_ls.setup({
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = {"vim"},
+    vim.lsp.config({
+      lua_ls = {
+        settings = {
+          Lua = {
+            diagnostics = { globals = { "vim" } },
+          },
+        },
+      },
+      ts_ls = {},
+      html = {},
+      cssls = {},
+      gopls = {
+        settings = {
+          gopls = {
+            gofumpt = true,
+            usePlaceholders = true,
+            staticcheck = true,
+            analyses = {
+              unusedparams = true,
+              unreachable = true,
+            },
+          },
+        },
+      },
+      jdtls = {
+        settings = {
+          java = {
+            format = {
+              enabled = true,
+            },
+            saveActions = {
+              organizeImports = true,
+            },
           },
         },
       },
     })
 
-    --setup for tsserver
-    lspconfig.ts_ls.setup({}) 
-
-    --setup for html
-    lspconfig.html.setup({})
-
-    --CSS:
-    lspconfig.cssls.setup({})
-
-    lspconfig.gopls.setup({
-      settings = {
-        gopls = {
-          gofumpt = true, -- Format using gofumpt (stricter gofmt)
-          usePlaceholders = true, -- Enable placeholders for function parameters/snippets
-          staticcheck = true, -- Enable additional checks
-          analyses = {
-            unusedparams = true,
-            unreachable = true,
-          },
-        }
-      }
-    })
-
-    lspconfig.jdtls.setup({
-      settings = {
-        java = {
-          format = {
-            enabled = true,
-          },
-          saveActions = {
-            organizeImports = true,
-          },
-        },
-      },
-    })
-
+    vim.lsp.enable("lua_ls")
+    vim.lsp.enable("ts_ls")
+    vim.lsp.enable("html")
+    vim.lsp.enable("cssls")
+    vim.lsp.enable("gopls")
+    vim.lsp.enable("jdtls")
   end,
 }
 

@@ -20,5 +20,6 @@ require("lazy").setup({
   require("plugins.autopairs"),
   require("plugins.mason"),
   require("plugins.nvim-tree"),
-  require("plugins.copilot")
+  require("plugins.copilot"),
+  require("plugins.toggle-terminal"),
 })
